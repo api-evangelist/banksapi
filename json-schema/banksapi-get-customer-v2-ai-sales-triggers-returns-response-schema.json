@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/banksapi/main/json-schema/banksapi-get-customer-v2-ai-sales-triggers-returns-response-schema.json",
+  "title": "GetCustomerV2AiSalesTriggersReturnsResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiSalesTriggersReturnsResponse",
+  "type": "object",
+  "properties": {
+    "entity.displayName": {
+      "type": "string"
+    },
+    "entity.entityClass": {
+      "type": "string"
+    },
+    "entity.id": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "tagTreeItem.description": {
+      "type": "string"
+    },
+    "tagTreeItem.displayName": {
+      "type": "string"
+    },
+    "tagTreeItem.systemId": {
+      "type": "integer"
+    },
+    "tagTreeItem.systemName": {
+      "type": "string"
+    },
+    "tagTreeItem.systemNameParent": {
+      "type": "string"
+    }
+  }
+}

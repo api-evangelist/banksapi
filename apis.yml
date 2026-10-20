@@ -1,23 +1,116 @@
 aid: banksapi
+
 name: fineconomy
-description: 'fineconomy is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://banksapi.de/wp-content/themes/banksapi/img/social/og-default-de.jpg
+
+description: 'BANKSapi verbindet Ihre Anwendung per API mit über 3.000 Banken: Kontodaten, SEPA-Zahlungen, Pay by Bank und Datenanalysen – PSD2-Lizenz
+  inklusive. Das Unternehmen bietet umfassende Banking‑APIs für Kontoinformationen, Zahlungsinitiierung, Datenanalyse und Frontend‑Integration,
+  unterstützt von einer PSD2‑Lizenz und richtet sich an Entwickler, FinTech‑Startups und etablierte Banken, die digitale Services skalieren wollen.'
+
 url: https://raw.githubusercontent.com/api-evangelist/banksapi/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- Banking
+- API
+- FinTech
+- Payments
+- DataAnalytics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/banksapi-rules.yml
+- type: JSONLD
+  url: json-ld/banksapi-context.jsonld
+- type: Vocabulary
+  url: vocabulary/banksapi-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/banksapi-data-model.yml
+- type: Compliance
+  url: https://banksapi.de/en/security/
+- type: Authentication
+  url: authentication/banksapi-authentication.yml
+- type: Conformance
+  url: conformance/banksapi-conformance.yml
+- type: LLMsTxt
+  url: llms/banksapi-llms.txt
+- type: SecurityTxt
+  url: well-known/banksapi-status-security.txt
+- type: WellKnown
+  url: well-known/banksapi-well-known.yml
+- type: Hosts
+  url: hosts/banksapi-hosts.yml
+- type: StatusPage
+  url: https://status.banksapi.de/
+- type: Security
+  url: https://banksapi.de/en/security/
+- type: GitHubOrganization
+  url: https://github.com/BANKSapi
+- type: OAuthScopes
+  url: scopes/banksapi-scopes.yml
+- type: TrustCenter
+  url: security/banksapi-trust-center.yml
+- type: DomainSecurity
+  url: security/banksapi-domain-security.yml
 - type: Website
   url: https://banksapi.de/
+- type: DeveloperPortal
+  url: https://docs.banksapi.de/
+- type: Documentation
+  url: https://docs.banksapi.de/guide/
+- type: APIReference
+  url: https://docs.banksapi.de/api/
+- type: GettingStarted
+  url: https://docs.banksapi.de/guide/quickstart.html
+- type: Support
+  url: https://banksapi.de/testzugang/
+
+apis:
+- aid: banksapi:banksapi-api
+  name: fineconomy API
+  description: 'fineconomy API as documented publicly: 29 operations. Contract generated from the documentation by API Evangelist (2026-10-20);
+    not the provider''s own document.'
+  humanURL: https://docs.banksapi.de/api/ai-connect.html
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/banksapi-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/banksapi-get-customer-v2-ai-disposable-money-returns-response-schema.json
+  - type: JSONSchema
+    url: json-schema/banksapi-get-customer-v2-ai-sales-triggers-returns-response-schema.json
+  - type: JSONSchema
+    url: json-schema/banksapi-get-customer-v2-ai-tagging-rules-playground-response-schema.json
+  - type: JSONSchema
+    url: json-schema/banksapi-put-customer-v2-bankzugaenge-accessid-productid-kontoumsaetze-trans-schema.json
+  - type: JSONSchema
+    url: json-schema/banksapi-put-customer-v2-bankzugaenge-accessid-productid-kontoumsaetze-trans2-schema.json
+  - type: JSONSchema
+    url: json-schema/banksapi-get-customer-v2-ai-affinities-hide-response-schema.json
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 26
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

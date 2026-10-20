@@ -1,0 +1,146 @@
+# BANKSapi
+
+> BANKSapi is a German Open Banking platform providing access to 3,000+ banks via a single REST API. It offers account information services (AIS) from German, Austrian, and Swiss banks, payment initiation services (PIS) for SEPA payments, and AI-powered transaction analytics. BANKSapi holds a PSD2 license (ZAG) as a regulated payment institution.
+
+## MCP Server Tools
+
+This MCP server provides four tools for accessing BANKSapi documentation:
+
+- **get-banksapi-overview**: Return this index (llms.txt). Call it first to discover the available pages and specs.
+- **search-banksapi-docs**: Semantic search across all documentation using RAG. Best for questions like "How do I authenticate?" or "What is HATEOAS?"
+- **get-banksapi-docs-page**: Fetch the Markdown for a specific docs page (a path or URL; a `.md`/`.html` suffix and section indexes like `/guide` are handled). For the API paths `/api/banks-connect`, `/api/ai-connect`, `/api/pay-connect` it returns a compact operation index rendered from the OpenAPI spec.
+- **get-banksapi-openapi-spec**: Get an OpenAPI 3.0 spec, or a slice of one. Available specs: `banks-connect`, `ai-connect`, `pay-connect`. Pass `operation_id` for a single operation with the schemas it references (preferred — the full specs are large), or `tag` for a whole section.
+
+## Products Overview
+
+Choose the right product for your use case:
+
+| Product | Use Case | Users | Key Feature |
+|---------|----------|-------|-------------|
+| **BANKS/Connect** | Build banking features for your customers | Multi-tenant, multi-user | Full Open Banking API for AIS + PIS |
+| **ONE/Connect** | Access your own bank accounts | Single user only | Simplified API for personal/business accounts |
+| **PAY/Connect** | Accept payments in eCommerce | Per transaction | Pay by Bank checkout (25¢/transaction) |
+| **AI/Connect** | Enrich transaction data | Add-on to BANKS/Connect | Categorization, business partners, insights |
+| **WEB/Connect** | Embed banking UI components | Add-on | Pre-built web components for bank selection, SCA |
+| **REG/Protect** | Use without own PSD2 license | Required for non-regulated | BANKSapi handles credentials + compliance |
+| **LLM/Connect** | Connect banking to AI agents | Add-on | MCP server for LLM applications |
+
+### When to use which API?
+
+- **Building a fintech app with multiple users?** → BANKS/Connect
+- **Connecting your own company's bank accounts?** → ONE/Connect
+- **Adding Pay by Bank to your checkout?** → PAY/Connect
+- **Need transaction categorization or insights?** → AI/Connect (add-on)
+
+## Integration Flow (Quick Start)
+
+Typical integration with BANKS/Connect for non-regulated clients:
+
+```
+1. Get client token      POST /auth/oauth2/token (grant_type=client_credentials)
+2. Create user           POST /auth/mgmt/v1/tenants/{tenant}/users
+3. Get user token        POST /auth/oauth2/token (grant_type=password)
+4. Add bank access       POST /customer/v2/bankzugaenge → redirects to REG/Protect
+5. Query bank accesses   GET /customer/v2/bankzugaenge
+6. Query transactions    GET /customer/v2/bankzugaenge/{id}/{iban}/kontoumsaetze
+```
+
+Full walkthrough: [/guide/quickstart](/guide/quickstart)
+
+## Authentication (OAuth2)
+
+BANKSapi uses 2-legged OAuth2:
+
+- **Refresh token**: Your API credentials (Basic Auth). Long-lived, used only to get access tokens.
+- **Access token**: Bearer token for API calls. Valid 2 hours.
+
+**Two token levels:**
+- **Client token** (`grant_type=client_credentials`): Management operations like creating users
+- **User token** (`grant_type=password`): User-specific operations like adding bank access
+
+Details: [/guide/concepts](/guide/concepts) | [/guide/auth](/guide/auth)
+
+## REG/Protect: Regulated vs Non-Regulated
+
+**Important distinction:**
+
+- **Regulated clients** (own PSD2 license): Can receive bank credentials directly, handle SCA themselves
+- **Non-regulated clients** (use REG/Protect): Must redirect users to BANKSapi's hosted flow for credential entry and SCA
+
+Most integrations use REG/Protect. When you call "Add Bank Access", you receive HTTP 451 with a redirect URL to BANKSapi's secure frontend where users select their bank and authenticate.
+
+Details: [/guide/quickstart](/guide/quickstart) | [/guide/customer](/guide/customer)
+
+## Guides
+
+### Getting Started
+- [/guide/index](/guide/index) - Platform overview
+- [/guide/quickstart](/guide/quickstart) - Step-by-step integration guide
+- [/guide/concepts](/guide/concepts) - Core concepts: OAuth2, HATEOAS, REST, encryption
+
+### BANKS/Connect (Core Open Banking)
+- [/guide/auth](/guide/auth) - Auth API: tokens, user management
+- [/guide/customer](/guide/customer) - Customer API: bank accesses, accounts, transactions, transfers
+- [/guide/providers](/guide/providers) - Providers API: query available banks
+
+### AI/Connect (Data Analytics)
+- [/guide/ai-connect](/guide/ai-connect) - Categorization, business partners, insights
+- [/guide/transaction-categories](/guide/transaction-categories) - Category codes reference
+
+### PAY/Connect (Pay by Bank)
+- [/guide/pay-connect](/guide/pay-connect) - Payment initiation for eCommerce
+
+### Integration Methods
+- [/guide/webconnect](/guide/webconnect) - WEB/Connect: pre-built banking widgets
+- [/guide/ebics](/guide/ebics) - EBICS for corporate banking
+- [/guide/docs-mcp](/guide/docs-mcp) - Docs MCP Server for AI coding assistants
+
+### Reference
+- [/guide/demo-provider](/guide/demo-provider) - Demo provider test credentials for sandbox testing
+- [/guide/errors-messages](/guide/errors-messages) - Error codes and handling
+- [/guide/faq](/guide/faq) - FAQ
+
+## API Reference
+
+Fetch a compact operation index (operationIds, methods, paths) with `get-banksapi-docs-page`,
+then fetch the full detail of one operation with `get-banksapi-openapi-spec` (`operation_id=...`):
+
+- [/api/banks-connect](/api/banks-connect) - BANKS/Connect (Auth, Customer, Providers)
+- [/api/ai-connect](/api/ai-connect) - AI/Connect endpoints
+- [/api/pay-connect](/api/pay-connect) - PAY/Connect endpoints
+
+## OpenAPI Specifications
+
+Use the `get-banksapi-openapi-spec` tool. The full specs are large, so prefer a slice:
+pass `operation_id` for a single operation (roughly 1–2% of the full size) or `tag` for one section.
+
+- `banks-connect` - BANKS/Connect OpenAPI 3.0 (YAML, ~230KB, 57 operations)
+- `ai-connect` - AI/Connect OpenAPI 3.0 (JSON, ~545KB, 23 operations)
+- `pay-connect` - PAY/Connect OpenAPI 3.0 (YAML, ~15KB, 3 operations)
+
+## Key Concepts
+
+- **Tenant**: Your organization in BANKSapi. You create users under your tenant.
+- **User**: Technical user corresponding 1:1 to an end customer. Created via Auth API.
+- **Bank Access**: Connection to a bank. One user can have multiple bank accesses.
+- **Bank Product**: Individual account (Girokonto, Depot, Kredit) under a bank access.
+- **SCA/TAN**: Strong Customer Authentication. Required for bank access creation and consent renewal (typically every 180 days).
+- **HATEOAS**: API returns `relations` with URLs for available next actions.
+
+## Base URLs
+
+- API: `https://banksapi.io`
+- Documentation: `https://docs.banksapi.de`
+- Swagger UI: `https://banksapi.io/swagger/`
+
+## Resources
+
+- [llms-full.txt](https://docs.banksapi.de/llms-full.txt) - All guides concatenated into one document
+- [Trial Access](https://banksapi.de/en/free-trial/) - Request free API credentials
+- [Banking Widgets Demo](https://github.com/BANKSapi/banking-widgets-demo) - WEB/Connect examples
+- [ATLAS](https://banksapi.io/atlas) - No-code testing interface
+
+## Support
+
+- Email: support@banksapi.de
+- Website: https://banksapi.de

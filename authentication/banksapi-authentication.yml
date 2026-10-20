@@ -1,0 +1,24 @@
+generated: '2026-10-20'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.banksapi.de/guide/quickstart.html
+sources:
+- https://docs.banksapi.de/guide/quickstart.html
+description: Authentication is based on the (2‑legged) OAuth2 protocol.
+schemes:
+- type: oauth2
+  name: OAuth2
+  evidence: we're basing our authentication on the (2-legged) OAuth2 protocol
+  flows:
+  - client_credentials
+  - password
+  token_url: /auth/oauth2/token
+  scopes:
+  - http://banksapi.io/customer/read
+  - http://banksapi.io/provider/read
+  - http://banksapi.io/customer/modify
+  - http://banksapi.io/customer/ueberweisung
+  - auth/tenants/users/create
+  how_to_obtain: Use the POST /auth/oauth2/token endpoint with grant_type=client_credentials for management‑level tokens or grant_type=password
+    with username and password for user‑level tokens.
+docs: https://docs.banksapi.de/guide/quickstart.html

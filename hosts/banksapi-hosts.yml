@@ -1,0 +1,96 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 4
+  other_domain: 1
+  platform: 1
+  roles:
+  - api
+  - other
+  - portal
+  - source
+  - status
+  - website
+hosts:
+- host: api.banksapi.de
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: banksapi.de
+  role: api
+  relation: own
+- host: banksapi.de
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Compliance
+  - Security
+  - Website
+  - Support
+  serves:
+  - docs
+  registrable_domain: banksapi.de
+  role: website
+  relation: own
+- host: banksapi.io
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: banksapi.io
+  role: other
+  relation: other-domain
+- host: docs.banksapi.de
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - spec-found
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - GettingStarted
+  serves:
+  - docs
+  - spec
+  registrable_domain: banksapi.de
+  role: portal
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - GitHubOrganization
+  serves:
+  - docs
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: status.banksapi.de
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: banksapi.de
+  role: status
+  relation: own

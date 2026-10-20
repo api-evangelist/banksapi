@@ -1,0 +1,943 @@
+openapi: 3.1.0
+info:
+  title: fineconomy API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 29 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; fineconomy has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 29
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.banksapi.de/api/ai-connect.html
+paths:
+  /customer/v2/ai/affinities/Hide:
+    get:
+      operationId: get_customer_v2_ai_affinities_Hide
+      tags:
+      - Customer
+      summary: Get affinities tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiAffinitiesHideResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/affinities/Playground:
+    get:
+      operationId: get_customer_v2_ai_affinities_Playground
+      tags:
+      - Customer
+      summary: Get affinities tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/affinities/Returns:
+    get:
+      operationId: get_customer_v2_ai_affinities_Returns
+      tags:
+      - Customer
+      summary: Get affinities tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiAffinitiesReturnsResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/affordability/Hide:
+    get:
+      operationId: get_customer_v2_ai_affordability_Hide
+      tags:
+      - Customer
+      summary: Get affordability tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiAffordabilityHideResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/affordability/Playground:
+    get:
+      operationId: get_customer_v2_ai_affordability_Playground
+      tags:
+      - Customer
+      summary: Get affordability tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/affordability/Returns:
+    get:
+      operationId: get_customer_v2_ai_affordability_Returns
+      tags:
+      - Customer
+      summary: Get affordability tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiAffordabilityReturnsResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/cashflow/Hide:
+    get:
+      operationId: get_customer_v2_ai_cashflow_Hide
+      tags:
+      - Customer
+      summary: Get cashflow tags
+      description: Get cashflow tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: focus
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: tag
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: catLevel
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: excludeSavings
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/cashflow/Playground:
+    get:
+      operationId: get_customer_v2_ai_cashflow_Playground
+      tags:
+      - Customer
+      summary: Get cashflow tags
+      description: Get cashflow tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: focus
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: tag
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: catLevel
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: excludeSavings
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/cashflow/Returns:
+    get:
+      operationId: get_customer_v2_ai_cashflow_Returns
+      tags:
+      - Customer
+      summary: Get cashflow tags
+      description: Get cashflow tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: focus
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: tag
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: catLevel
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: excludeSavings
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/contracts/Hide:
+    get:
+      operationId: get_customer_v2_ai_contracts_Hide
+      tags:
+      - Customer
+      summary: Get contracts tags
+      description: Get contracts tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: insuranceOnly
+        in: query
+        required: false
+        schema:
+          type: boolean
+      - name: insuranceOnlyExtended
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/contracts/Playground:
+    get:
+      operationId: get_customer_v2_ai_contracts_Playground
+      tags:
+      - Customer
+      summary: Get contracts tags
+      description: Get contracts tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: insuranceOnly
+        in: query
+        required: false
+        schema:
+          type: boolean
+      - name: insuranceOnlyExtended
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/contracts/Returns:
+    get:
+      operationId: get_customer_v2_ai_contracts_Returns
+      tags:
+      - Customer
+      summary: Get contracts tags
+      description: Get contracts tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: insuranceOnly
+        in: query
+        required: false
+        schema:
+          type: boolean
+      - name: insuranceOnlyExtended
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/credit-attributes/Hide:
+    get:
+      operationId: get_customer_v2_ai_credit_attributes_Hide
+      tags:
+      - Customer
+      summary: Get credit attributes tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiCreditAttributesHideResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/credit-attributes/Playground:
+    get:
+      operationId: get_customer_v2_ai_credit_attributes_Playground
+      tags:
+      - Customer
+      summary: Get credit attributes tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/credit-attributes/Returns:
+    get:
+      operationId: get_customer_v2_ai_credit_attributes_Returns
+      tags:
+      - Customer
+      summary: Get credit attributes tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiCreditAttributesReturnsResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/disposable-money/Hide:
+    get:
+      operationId: get_customer_v2_ai_disposable_money_Hide
+      tags:
+      - Customer
+      summary: Get disposable money tag
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/disposable-money/Playground:
+    get:
+      operationId: get_customer_v2_ai_disposable_money_Playground
+      tags:
+      - Customer
+      summary: Get disposable money tag
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/disposable-money/Returns:
+    get:
+      operationId: get_customer_v2_ai_disposable_money_Returns
+      tags:
+      - Customer
+      summary: disposable money analysis based on salary cycle and spending patterns for a provided user.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiDisposableMoneyReturnsResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/life-events/Returns:
+    get:
+      operationId: get_customer_v2_ai_life_events_Returns
+      tags:
+      - Customer
+      summary: the life events for a provided user.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiLifeEventsReturnsResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/sales-triggers/Hide:
+    get:
+      operationId: get_customer_v2_ai_sales_triggers_Hide
+      tags:
+      - Customer
+      summary: Get sales triggers tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/sales-triggers/Playground:
+    get:
+      operationId: get_customer_v2_ai_sales_triggers_Playground
+      tags:
+      - Customer
+      summary: Get sales triggers tags
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: threshold
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: salaryRaiseThreshold
+        in: query
+        required: false
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/sales-triggers/Returns:
+    get:
+      operationId: get_customer_v2_ai_sales_triggers_Returns
+      tags:
+      - Customer
+      summary: sales triggers analysis for a provided user.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: threshold
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: salaryRaiseThreshold
+        in: query
+        required: false
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiSalesTriggersReturnsResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/ai/tagging-rules/Playground:
+    get:
+      operationId: get_customer_v2_ai_tagging_rules_Playground
+      tags:
+      - Customer
+      summary: Provides user-defined transaction tagging rules for automated categorization based on counterparty information.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+        description: ID used to track end-to-end processing of the request
+      - name: tagTreeId
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: ID of a tag tree. If missing, all rules are selected.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCustomerV2AiTaggingRulesPlaygroundResponse'
+      x-evidence:
+        kind: documentation
+  /customer/v2/bankzugaenge/{accessid}/{productid}/kontoumsaetze/{transactionid}:
+    put:
+      operationId: put_customer_v2_bankzugaenge_accessid_productid_kontoumsaetze_transactionid
+      tags:
+      - Customer
+      summary: Update categories tags
+      description: Applies corrections to the categorization of transactions.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: accessid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: transactionid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: changeExisting
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: Re-categorizes all existing transactions with this counterparty
+      - name: createRule
+        in: query
+        required: false
+        schema:
+          type: boolean
+        description: Creates a rule for this counterparty
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans2'
+      x-evidence:
+        kind: documentation
+  /customer/v2/bankzugaenge/{accessid}/{productid}/kontoumsaetze?tag=business-partners:
+    get:
+      operationId: get_customer_v2_bankzugaenge_accessid_productid_kontoumsaetze_tag_business_partn
+      tags:
+      - Customer
+      summary: Get business partners tags
+      description: Returns transactions with business partner information for a provided bank product.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: accessid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/bankzugaenge/{accessid}/{productid}/kontoumsaetze?tag=categories:
+    get:
+      operationId: get_customer_v2_bankzugaenge_accessid_productid_kontoumsaetze_tag_categories
+      tags:
+      - Customer
+      summary: Get categories tags
+      description: Returns categorized transactions for a provided bank product.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: accessid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/bankzugaenge/{accessid}/{productid}/kontoumsaetze?tag=freelancer-categories:
+    get:
+      operationId: get_customer_v2_bankzugaenge_accessid_productid_kontoumsaetze_tag_freelancer_cat
+      tags:
+      - Customer
+      summary: Get freelancer categories tags
+      description: Returns freelancer-specific categorized transactions for a provided bank product.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: accessid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer/v2/bankzugaenge/{accessid}/{productid}/kontoumsaetze?tag=insurance-types:
+    get:
+      operationId: get_customer_v2_bankzugaenge_accessid_productid_kontoumsaetze_tag_insurance_type
+      tags:
+      - Customer
+      summary: Get insurance types tags
+      description: Returns insurance division and product classification for a provided bank product.
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: accessid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /tags/v1/tags/tag-trees/{tagtreeid}/tag-tree-items:
+    get:
+      operationId: get_tags_v1_tags_tag_trees_tagtreeid_tag_tree_items
+      tags:
+      - Tags
+      summary: Get categories tags
+      description: 'To get the full list of categories, use: GET /tags/v1/tags/tag-trees/1/tag-tree-items/'
+      x-source: https://docs.banksapi.de/api/ai-connect.html
+      parameters:
+      - name: tagtreeid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: x-correlation-id
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 7 example path(s) differing only at tagtreeId
+components:
+  schemas:
+    GetCustomerV2AiAffinitiesHideResponse:
+      type: object
+      properties:
+        entity:
+          type: object
+        tagTreeItem:
+          type: object
+    GetCustomerV2AiAffinitiesReturnsResponse:
+      type: object
+      properties:
+        entity:
+          type: object
+        tagTreeItem:
+          type: object
+    GetCustomerV2AiAffordabilityHideResponse:
+      type: object
+      properties:
+        details:
+          type: object
+    GetCustomerV2AiAffordabilityReturnsResponse:
+      type: object
+      properties:
+        details:
+          type: object
+    GetCustomerV2AiCreditAttributesHideResponse:
+      type: object
+      properties:
+        assets:
+          type: object
+        budget:
+          type: object
+    GetCustomerV2AiCreditAttributesReturnsResponse:
+      type: object
+      properties:
+        assets:
+          type: object
+        budget:
+          type: object
+    GetCustomerV2AiDisposableMoneyReturnsResponse:
+      type: object
+      properties:
+        details.amountCashflow:
+          type: number
+        details.amountCurrentlyLeft:
+          type: number
+        details.amountDisposableMoney:
+          type: number
+        details.amountExpectedFixedCashflow:
+          type: number
+        details.amountExpectedFlexCashflow:
+          type: number
+        details.amountExpectedLeft:
+          type: number
+        details.amountExpectedLeftDaily:
+          type: number
+        details.amountSalaryLatest:
+          type: number
+        details.amountSalaryNext:
+          type: number
+        details.dateSalaryLatest:
+          type: string
+        details.dateSalaryNext:
+          type: string
+        details.daysUntilSalary:
+          type: integer
+    GetCustomerV2AiLifeEventsReturnsResponse:
+      type: object
+      properties:
+        details.eventDate:
+          type: string
+    GetCustomerV2AiSalesTriggersReturnsResponse:
+      type: object
+      properties:
+        entity.displayName:
+          type: string
+        entity.entityClass:
+          type: string
+        entity.id:
+          type: string
+        id:
+          type: string
+        tagTreeItem.description:
+          type: string
+        tagTreeItem.displayName:
+          type: string
+        tagTreeItem.systemId:
+          type: integer
+        tagTreeItem.systemName:
+          type: string
+        tagTreeItem.systemNameParent:
+          type: string
+    GetCustomerV2AiTaggingRulesPlaygroundResponse:
+      type: object
+      properties:
+        counterpartyIban:
+          type: string
+          description: IBAN of the counterparty
+        counterpartyName:
+          type: string
+          description: Name of the counterparty
+        id:
+          type: string
+          description: Rule identifier
+        tagTreeItem:
+          type: object
+          description: Tag tree item applied by the rule
+        user:
+          type: string
+          description: User identifier
+    PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans:
+      type: object
+      properties:
+        tags:
+          type: object
+          description: Tag tree item with systemName values
+      required:
+      - tags
+    PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans2:
+      type: object
+      properties:
+        '204':
+          type: string
+          description: Request fulfilled, nothing follows
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: /auth/oauth2/token
+          scopes:
+            http://banksapi.io/customer/read: ''
+            http://banksapi.io/provider/read: ''
+            http://banksapi.io/customer/modify: ''
+            http://banksapi.io/customer/ueberweisung: ''
+            auth/tenants/users/create: ''
+      x-source: https://docs.banksapi.de/guide/quickstart.html
+tags:
+- name: Customer
+- name: Tags
+security:
+- OAuth2:
+  - http://banksapi.io/customer/read
+  - http://banksapi.io/provider/read
+  - http://banksapi.io/customer/modify
+  - http://banksapi.io/customer/ueberweisung
+  - auth/tenants/users/create

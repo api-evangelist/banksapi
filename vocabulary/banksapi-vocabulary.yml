@@ -1,0 +1,84 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/banksapi-openapi-generated.yml
+vocabulary:
+  name: fineconomy Domain Vocabulary
+  description: 'Terms declared by fineconomy''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: GetCustomerV2AiAffinitiesHideResponse
+    definition: 'Object declared by the contract with fields: entity, tagTreeItem.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiAffinitiesHideResponse
+  - term: GetCustomerV2AiAffinitiesReturnsResponse
+    definition: 'Object declared by the contract with fields: entity, tagTreeItem.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiAffinitiesReturnsResponse
+  - term: GetCustomerV2AiAffordabilityHideResponse
+    definition: 'Object declared by the contract with fields: details.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiAffordabilityHideResponse
+  - term: GetCustomerV2AiAffordabilityReturnsResponse
+    definition: 'Object declared by the contract with fields: details.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiAffordabilityReturnsResponse
+  - term: GetCustomerV2AiCreditAttributesHideResponse
+    definition: 'Object declared by the contract with fields: assets, budget.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiCreditAttributesHideResponse
+  - term: GetCustomerV2AiCreditAttributesReturnsResponse
+    definition: 'Object declared by the contract with fields: assets, budget.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiCreditAttributesReturnsResponse
+  - term: GetCustomerV2AiDisposableMoneyReturnsResponse
+    definition: 'Object declared by the contract with fields: details.amountCashflow, details.amountCurrentlyLeft, details.amountDisposableMoney,
+      details.amountExpectedFixedCashflow, details.amountExpectedFlexCashflow, details.amountExpectedLeft, details.amountExpectedLeftDaily, details.amountSalaryLatest,
+      details.amountSalaryNext, details.dateSalaryLatest, details.dateSalaryNext, details.daysUntilSalary.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiDisposableMoneyReturnsResponse
+  - term: GetCustomerV2AiLifeEventsReturnsResponse
+    definition: 'Object declared by the contract with fields: details.eventDate.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiLifeEventsReturnsResponse
+  - term: GetCustomerV2AiSalesTriggersReturnsResponse
+    definition: 'Object declared by the contract with fields: entity.displayName, entity.entityClass, entity.id, id, tagTreeItem.description,
+      tagTreeItem.displayName, tagTreeItem.systemId, tagTreeItem.systemName, tagTreeItem.systemNameParent.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiSalesTriggersReturnsResponse
+  - term: GetCustomerV2AiTaggingRulesPlaygroundResponse
+    definition: 'Object declared by the contract with fields: counterpartyIban, counterpartyName, id, tagTreeItem, user.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiTaggingRulesPlaygroundResponse
+  - term: PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans
+    definition: 'Object declared by the contract with fields: tags.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans
+  - term: PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans2
+    definition: 'Object declared by the contract with fields: 204.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans2
+  - term: Customer
+    definition: 'Resource group in the contract; its operation GET /customer/v2/ai/affinities/Hide: Get affinities tags'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml
+  - term: Tags
+    definition: 'Resource group in the contract; its operation GET /tags/v1/tags/tag-trees/{tagtreeid}/tag-tree-items: To get the full list of
+      categories, use: GET /tags/v1/tags/tag-trees/1/tag-tree-items/'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/banksapi-openapi-generated.yml

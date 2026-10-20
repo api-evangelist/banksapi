@@ -1,0 +1,13 @@
+generated: '2026-10-20'
+method: searched
+probe: true
+source: https://banksapi.de/en/security/
+url: https://banksapi.de/en/security/
+certifications:
+- ISO 27001
+- GDPR
+evidence:
+- source: https://banksapi.de/en/security/
+  keywords:
+  - iso/iec 27001
+  - gdpr

@@ -1,0 +1,35 @@
+generated: '2026-10-20'
+method: derived
+source: openapi/banksapi-openapi-generated.yml
+schemes:
+- name: OAuth2
+  source: openapi/banksapi-openapi-generated.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/oauth2/token
+scopes:
+- scope: auth/tenants/users/create
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/banksapi-openapi-generated.yml
+- scope: http://banksapi.io/customer/modify
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/banksapi-openapi-generated.yml
+- scope: http://banksapi.io/customer/read
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/banksapi-openapi-generated.yml
+- scope: http://banksapi.io/customer/ueberweisung
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/banksapi-openapi-generated.yml
+- scope: http://banksapi.io/provider/read
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/banksapi-openapi-generated.yml

@@ -1,0 +1,146 @@
+{
+  "@context": {
+    "@vocab": "https://banksapi.de/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "banksapi": "https://banksapi.de/schema#",
+    "GetCustomerV2AiAffinitiesHideResponse": "banksapi:GetCustomerV2AiAffinitiesHideResponse",
+    "entity": {
+      "@id": "banksapi:entity"
+    },
+    "tagTreeItem": {
+      "@id": "banksapi:tagTreeItem"
+    },
+    "GetCustomerV2AiAffinitiesReturnsResponse": "banksapi:GetCustomerV2AiAffinitiesReturnsResponse",
+    "GetCustomerV2AiAffordabilityHideResponse": "banksapi:GetCustomerV2AiAffordabilityHideResponse",
+    "details": {
+      "@id": "banksapi:details"
+    },
+    "GetCustomerV2AiAffordabilityReturnsResponse": "banksapi:GetCustomerV2AiAffordabilityReturnsResponse",
+    "GetCustomerV2AiCreditAttributesHideResponse": "banksapi:GetCustomerV2AiCreditAttributesHideResponse",
+    "assets": {
+      "@id": "banksapi:assets"
+    },
+    "budget": {
+      "@id": "banksapi:budget"
+    },
+    "GetCustomerV2AiCreditAttributesReturnsResponse": "banksapi:GetCustomerV2AiCreditAttributesReturnsResponse",
+    "GetCustomerV2AiDisposableMoneyReturnsResponse": "banksapi:GetCustomerV2AiDisposableMoneyReturnsResponse",
+    "details.amountCashflow": {
+      "@id": "banksapi:details.amountCashflow",
+      "@type": "xsd:decimal"
+    },
+    "details.amountCurrentlyLeft": {
+      "@id": "banksapi:details.amountCurrentlyLeft",
+      "@type": "xsd:decimal"
+    },
+    "details.amountDisposableMoney": {
+      "@id": "banksapi:details.amountDisposableMoney",
+      "@type": "xsd:decimal"
+    },
+    "details.amountExpectedFixedCashflow": {
+      "@id": "banksapi:details.amountExpectedFixedCashflow",
+      "@type": "xsd:decimal"
+    },
+    "details.amountExpectedFlexCashflow": {
+      "@id": "banksapi:details.amountExpectedFlexCashflow",
+      "@type": "xsd:decimal"
+    },
+    "details.amountExpectedLeft": {
+      "@id": "banksapi:details.amountExpectedLeft",
+      "@type": "xsd:decimal"
+    },
+    "details.amountExpectedLeftDaily": {
+      "@id": "banksapi:details.amountExpectedLeftDaily",
+      "@type": "xsd:decimal"
+    },
+    "details.amountSalaryLatest": {
+      "@id": "banksapi:details.amountSalaryLatest",
+      "@type": "xsd:decimal"
+    },
+    "details.amountSalaryNext": {
+      "@id": "banksapi:details.amountSalaryNext",
+      "@type": "xsd:decimal"
+    },
+    "details.dateSalaryLatest": {
+      "@id": "banksapi:details.dateSalaryLatest",
+      "@type": "xsd:string"
+    },
+    "details.dateSalaryNext": {
+      "@id": "banksapi:details.dateSalaryNext",
+      "@type": "xsd:string"
+    },
+    "details.daysUntilSalary": {
+      "@id": "banksapi:details.daysUntilSalary",
+      "@type": "xsd:integer"
+    },
+    "GetCustomerV2AiLifeEventsReturnsResponse": "banksapi:GetCustomerV2AiLifeEventsReturnsResponse",
+    "details.eventDate": {
+      "@id": "banksapi:details.eventDate",
+      "@type": "xsd:string"
+    },
+    "GetCustomerV2AiSalesTriggersReturnsResponse": "banksapi:GetCustomerV2AiSalesTriggersReturnsResponse",
+    "entity.displayName": {
+      "@id": "banksapi:entity.displayName",
+      "@type": "xsd:string"
+    },
+    "entity.entityClass": {
+      "@id": "banksapi:entity.entityClass",
+      "@type": "xsd:string"
+    },
+    "entity.id": {
+      "@id": "banksapi:entity.id",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "banksapi:id",
+      "@type": "xsd:string"
+    },
+    "tagTreeItem.description": {
+      "@id": "banksapi:tagTreeItem.description",
+      "@type": "xsd:string"
+    },
+    "tagTreeItem.displayName": {
+      "@id": "banksapi:tagTreeItem.displayName",
+      "@type": "xsd:string"
+    },
+    "tagTreeItem.systemId": {
+      "@id": "banksapi:tagTreeItem.systemId",
+      "@type": "xsd:integer"
+    },
+    "tagTreeItem.systemName": {
+      "@id": "banksapi:tagTreeItem.systemName",
+      "@type": "xsd:string"
+    },
+    "tagTreeItem.systemNameParent": {
+      "@id": "banksapi:tagTreeItem.systemNameParent",
+      "@type": "xsd:string"
+    },
+    "GetCustomerV2AiTaggingRulesPlaygroundResponse": "banksapi:GetCustomerV2AiTaggingRulesPlaygroundResponse",
+    "counterpartyIban": {
+      "@id": "banksapi:counterpartyIban",
+      "@type": "xsd:string"
+    },
+    "counterpartyName": {
+      "@id": "banksapi:counterpartyName",
+      "@type": "xsd:string"
+    },
+    "user": {
+      "@id": "banksapi:user",
+      "@type": "xsd:string"
+    },
+    "PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans": "banksapi:PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans",
+    "tags": {
+      "@id": "banksapi:tags"
+    },
+    "PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans2": "banksapi:PutCustomerV2BankzugaengeAccessidProductidKontoumsaetzeTrans2"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "fineconomy API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects fineconomy's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/_ae-authored/banksapi-openapi-generated.yml.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/_ae-authored/banksapi-openapi-generated.yml"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/banksapi/main/json-schema/banksapi-get-customer-v2-ai-tagging-rules-playground-response-schema.json",
+  "title": "GetCustomerV2AiTaggingRulesPlaygroundResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiTaggingRulesPlaygroundResponse",
+  "type": "object",
+  "properties": {
+    "counterpartyIban": {
+      "type": "string",
+      "description": "IBAN of the counterparty"
+    },
+    "counterpartyName": {
+      "type": "string",
+      "description": "Name of the counterparty"
+    },
+    "id": {
+      "type": "string",
+      "description": "Rule identifier"
+    },
+    "tagTreeItem": {
+      "type": "object",
+      "description": "Tag tree item applied by the rule"
+    },
+    "user": {
+      "type": "string",
+      "description": "User identifier"
+    }
+  }
+}

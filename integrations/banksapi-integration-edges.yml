@@ -1,0 +1,18 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/banksapi/integrations
+- https://zapier.com/apps/fineconomy/integrations
+- https://n8n.io/integrations/banksapi/
+- https://composio.dev/toolkits/banksapi
+- https://monid.ai/tools/banksapi
+checked:
+- https://composio.dev/toolkits/banksapi
+- https://monid.ai/tools/banksapi
+- https://n8n.io/integrations/banksapi/
+- https://zapier.com/apps/banksapi/integrations
+- https://zapier.com/apps/fineconomy/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

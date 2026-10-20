@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/banksapi/main/json-schema/banksapi-get-customer-v2-ai-disposable-money-returns-response-schema.json",
+  "title": "GetCustomerV2AiDisposableMoneyReturnsResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/banksapi-openapi-generated.yml#/components/schemas/GetCustomerV2AiDisposableMoneyReturnsResponse",
+  "type": "object",
+  "properties": {
+    "details.amountCashflow": {
+      "type": "number"
+    },
+    "details.amountCurrentlyLeft": {
+      "type": "number"
+    },
+    "details.amountDisposableMoney": {
+      "type": "number"
+    },
+    "details.amountExpectedFixedCashflow": {
+      "type": "number"
+    },
+    "details.amountExpectedFlexCashflow": {
+      "type": "number"
+    },
+    "details.amountExpectedLeft": {
+      "type": "number"
+    },
+    "details.amountExpectedLeftDaily": {
+      "type": "number"
+    },
+    "details.amountSalaryLatest": {
+      "type": "number"
+    },
+    "details.amountSalaryNext": {
+      "type": "number"
+    },
+    "details.dateSalaryLatest": {
+      "type": "string"
+    },
+    "details.dateSalaryNext": {
+      "type": "string"
+    },
+    "details.daysUntilSalary": {
+      "type": "integer"
+    }
+  }
+}
